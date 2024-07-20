@@ -4,11 +4,8 @@ import send from '../../../../assets/icons/send.svg';
 export const FormMessage = () => {
   return (
     <div className="formmessage-container">
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form name="contact" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
-        <p hidden>
-          <label>Don't fill this out: <input name="bot-field" /></label>
-        </p>
         <p>
           <label>Your Name: <input type="text" name="name" required /></label>
         </p>
