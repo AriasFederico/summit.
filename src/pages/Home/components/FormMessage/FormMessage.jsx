@@ -2,7 +2,7 @@ import './FormMessage.css';
 
 export const FormMessage = () => {
   return (
-      <form name="contact" method='POST' netlify>
+      <form name="contact" method='POST' data-netlify='true' data-netlify-recaptcha="true">
         <input type="hidden" name="form-name" value="name_of_my_form" />
         <p>
           <label>Your Name: <input type="text" name="name" required /></label>
