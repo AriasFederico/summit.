@@ -1,0 +1,59 @@
+.formmessage-container {
+  max-width: 660px;
+  margin: 0 auto 4rem;
+  padding: 2rem 0;
+}
+
+.title-formmessage {
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.textarea {
+  resize: none;
+  width: 100%;
+  min-height: 150px;
+}
+
+.form-message {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+
+.label-textarea {
+  margin-top: 1.5rem;
+}
+
+.name-email-container {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.btn-form-message {
+  background-color: var(--color-orange);
+  outline: none;
+  border: none;
+  padding: .5rem 5rem;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  align-self: self-start;
+  margin: 0 auto;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.btn-form-message:hover {
+  background-color: var(--color-orange-hover);
+  transition: var(--transition-time);
+}
+
+.send-icon {
+  width: 1rem;
+}

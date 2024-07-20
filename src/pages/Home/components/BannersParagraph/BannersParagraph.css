@@ -1,0 +1,14 @@
+.span-banners,
+.paragraph-banners {
+  font-family: var(--font-primary);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.span-banners {
+  color: var(--color-orange);
+}
+
+.paragraph-banners {
+  color: var(--color-white);
+}

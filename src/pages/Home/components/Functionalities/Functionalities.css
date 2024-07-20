@@ -1,0 +1,17 @@
+.functionalities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  margin-bottom: 4rem;
+}
+
+@media 
+  (width >= 1280px) {
+    .functionalities {
+      flex-direction: row;
+      padding: 3rem 0;
+    }
+}
+

@@ -1,0 +1,51 @@
+.paragraphbuttons {
+  margin-bottom: 4rem;
+  background-color: var(--color-cards);
+  padding: 5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  border-radius: var(--border-radius-base);
+}
+
+.paragraph-paragraphbuttons {
+  font-family: var(--font-primary);
+  color: var(--color-white);
+  font-weight: 200;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.btns-container-paragraphbuttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.link-paragraphbuttons {
+  background-color: var(--color-orange);
+  padding: .5rem 2rem;
+  color: white;
+  font-size: .9rem;
+}
+
+.link-paragraphbuttons-white {
+  color: var(--color-orange);
+  background-color: var(--color-white);
+}
+
+.link-paragraphbuttons:hover {
+  background-color: var(--color-orange-hover);
+}
+
+.link-paragraphbuttons-white:hover {
+  color: var(--color-white);
+}
+
+
+@media 
+(width >= 770px) {
+  .paragraph-paragraphbuttons {
+    padding: 0 7rem;
+  }
+}

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+/* FONTS */
+  --font-primary:"Kanit", sans-serif;
+  --font-monts:"Montserrat", sans-serif;
+
+/* COLORS */
+  --color-background:#22262f;
+  --color-cards:#282f39;
+  --color-orange:#ec6755;
+  --color-orange-hover:#eb7869;
+  --color-gray:#cecbcac5;
+  --color-white:#f7f7f7;
+  --color-green:#78ee61;
+
+/* RADIUS */
+  --border-radius-base: 10px;
+
+/* TRANSITION TIME*/
+  --transition-time: all .3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 360px;
+  background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-primary);
+  color: var(--color-white);
+  /* font-weight: 600; */
+}
+
+a {
+  text-decoration: none;
+}
+
+.homepage,
+.login,
+.register {
+  margin: 0 .7rem;
+}
+
+@media
+(width >= 885px) {
+
+  .header {
+    max-width: 1280px;
+    margin: 0 auto 2rem;
+  }
+  .homepage,
+  .login,
+  .register {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+/* @media  MOBILE
+  (width >= 600px)
+
+
+@media NOTEBOOK-PC
+  (width >= 1200px) { */
+
+  
+ /* BUTTON */
+
+.link-default {
+  font-weight: 200;
+  font-family: var(--font-primary);
+  transition: var(--transition-time);
+}
