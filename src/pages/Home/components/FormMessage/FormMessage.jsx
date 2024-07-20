@@ -3,7 +3,7 @@ import './FormMessage.css';
 export const FormMessage = () => {
   return (
       <form name="contact" method='POST' netlify>
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="name_of_my_form" />
         <p>
           <label>Your Name: <input type="text" name="name" required /></label>
         </p>
