@@ -1,10 +1,8 @@
 import './FormMessage.css';
-import send from '../../../../assets/icons/send.svg';
 
 export const FormMessage = () => {
   return (
-    <div className="formmessage-container">
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="contact" method="POST" netlify>
         <input type="hidden" name="form-name" value="contact" />
         <p>
           <label>Your Name: <input type="text" name="name" required /></label>
@@ -19,6 +17,5 @@ export const FormMessage = () => {
           <button type="submit">Send</button>
         </p>
       </form>
-    </div>
   );
 };
