@@ -20,8 +20,11 @@
 }
 
 .banner-calculator {
-  background-color: var(--color-cards);
   border-radius: var(--border-radius-base);
+}
+
+.banner-list {
+  background-color: var(--color-cards);
 }
 
 .banners-paragraph-container {

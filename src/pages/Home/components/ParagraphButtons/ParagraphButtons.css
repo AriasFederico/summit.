@@ -1,6 +1,6 @@
 .paragraphbuttons {
   margin-bottom: 4rem;
-  background-color: var(--color-cards);
+  /* background-color: var(--color-cards); */
   padding: 5rem 1rem;
   display: flex;
   flex-direction: column;
