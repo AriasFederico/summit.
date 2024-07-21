@@ -41,6 +41,7 @@
 
 .title-paragraph-banners {
   font-weight: 600;
+  font-size: 1.9rem;
 }
 
 
@@ -58,6 +59,7 @@
 
   .banner-bannershome {
     width: 40%;
+    margin: 0;
   }
 }
 
@@ -71,7 +73,7 @@
   }
 
   .title-paragraph-banners{
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
 }
