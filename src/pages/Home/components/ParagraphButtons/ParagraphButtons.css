@@ -35,11 +35,11 @@
 }
 
 .link-paragraphbuttons:hover {
-  background-color: var(--color-orange-hover);
+  /* background-color: var(--color-orange-hover); */
 }
 
 .link-paragraphbuttons-white:hover {
-  color: var(--color-white);
+  /* color: var(--color-white); */
 }
 
 

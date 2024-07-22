@@ -23,7 +23,7 @@
 }
 
 .link-presentation:hover {
-  background-color: var(--color-orange-hover);
+  /* background-color: var(--color-orange-hover); */
 }
 
 .banner-presentation-mobile {
