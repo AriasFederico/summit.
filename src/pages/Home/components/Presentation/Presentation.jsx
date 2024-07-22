@@ -2,7 +2,8 @@ import './Presentation.css'
 import { Ticks } from '../Ticks/Ticks'
 import tick from '../../../../assets/icons/tick.svg'
 import { Link } from 'react-router-dom'
-import banner_presentation from '../../../../assets/banners/banner-presentation.jpg'
+// import banner_presentation from '../../../../assets/banners/banner-presentation.jpg'
+import banner_presentation from '../../../../assets/banners/hme.svg'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 

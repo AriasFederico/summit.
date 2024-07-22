@@ -16,7 +16,7 @@
 
 .link-presentation {
   color: var(--color-white);
-  background-color: var(--color-orange);
+  background-color: var(--color-blue);
   padding: .5rem 2.5rem;
   align-self: flex-start;
   font-size: .9rem;
@@ -28,6 +28,7 @@
 
 .banner-presentation-mobile {
   width: 100%;
+  margin-top: 3rem;
 }
 
 .presentation-h1-btn-container {
@@ -56,9 +57,8 @@
 
     .banner-presentation-mobile {
       width: 50%;
-      object-fit: cover;
-      object-position: center;
-      height: 500px;
+      height: 450px;
+      margin: 0;
     }
 
     .link-presentation {
