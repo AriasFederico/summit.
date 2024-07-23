@@ -18,7 +18,7 @@
   --color-green:#78ee61;
 
 /* RADIUS */
-  --border-radius-base: 10px;
+  --border-radius-base: 3px;
 
 /* TRANSITION TIME*/
   --transition-time: all .3s ease;
