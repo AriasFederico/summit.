@@ -48,7 +48,7 @@
 
 @media
 (width >= 770px) {
-  .banner-list,
+  /* .banner-list,
   .banner-calculator {
     flex-direction: row;
     align-items: center;
@@ -59,23 +59,37 @@
   }
 
   .banner-bannershome {
-    width: 45%;
+    width: 40%;
     margin: 0;
-  }
+  } */
 }
 
 
 @media 
 (width >= 1280px) {
+  .banner-calculator {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .banner-list {
+    flex-direction: row-reverse;
+  }
+
   .banner-list,
   .banner-calculator {
-    gap: 5rem;
+    gap: 2rem;
     padding: 4rem 3rem;
   }
 
   .title-paragraph-banners{
     font-size: 2rem;
   }
+
+  .banner-bannershome {
+    width: 50%;
+    margin: 0;
+  } 
 
 }
 
