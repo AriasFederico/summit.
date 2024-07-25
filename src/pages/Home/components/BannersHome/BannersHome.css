@@ -37,12 +37,14 @@
 .title-span-paragraph-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1.5rem;
 }
 
 .title-paragraph-banners {
   font-weight: 600;
   font-size: 1.9rem;
+  color: var(--color-orange);
 }
 
 
@@ -78,12 +80,13 @@
 
   .banner-list,
   .banner-calculator {
-    gap: 2rem;
-    padding: 4rem 3rem;
+    gap: 3rem;
+    padding: 4rem 1rem;
   }
 
   .title-paragraph-banners{
     font-size: 2rem;
+    color: var(--color-orange);
   }
 
   .banner-bannershome {
@@ -94,8 +97,11 @@
 }
 
 
-
-
-
-
-
+@media 
+(width >= 1400) {
+  .banner-list,
+  .banner-calculator {
+    padding: 4rem 0;
+  }
+ 
+}

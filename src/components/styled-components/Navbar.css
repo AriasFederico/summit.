@@ -1,10 +1,18 @@
+.header {
+  max-width: 1400px;
+  margin: 0 auto 1rem;
+}
+
+
 .nav {
+  /* padding: .7rem 2rem; */
   position: relative;
   width: 100%;
-  padding: .7rem;
+  padding: 1rem .7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* margin-bottom: 1rem; */
 }
 
 .nav-pc {
@@ -17,8 +25,8 @@
 }
 
 .burguer-menu {
-  width: 2.8rem;
-  padding: .5rem .7rem;
+  width: 2rem;
+  /* padding: .5rem .7rem; */
   border-radius: var(--border-radius-base);
   background-color: var(--color-cards);
 }
@@ -41,10 +49,6 @@
   transition: var(--transition-time);
 }
 
-.link-nav-active:hover {
-  color: var(--color-orange);
-}
-
 .nav-active-container {
   transition: var(--transition-time);
   transform: translateY(0);
@@ -56,36 +60,55 @@
 }
 
 @media 
-(width >= 885px) {
+(width >= 884px) {
 
+  .header {
+    margin: 0 auto 2rem;
+  }
+  
   .nav {
     display: none;
   }
-
+  
   .nav-pc {
-    background-color: var(--color-cards);
-    padding: .7rem 2rem;
-    border-radius: var(--border-radius-base);
     display: flex;
     margin-top: 1rem;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1rem;
   }
 
   .links-pc-container {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 2rem;    
   }
-
-  .link-pc {
-    font-family: var(--font-primary);
+  
+  .register-pc {
+    background-color: var(--color-blue);
+    padding: .5rem 2rem;
+    border-radius: var(--border-radius-base);
     color: var(--color-white);
-    font-weight: 300;
+    font-size: .9rem;
   }
 
-  .link-pc:hover {
-    transition: var(--transition-time);
-    color: var(--color-orange);
+  .register-pc:hover {
+    background-color: var(--color-blue-hover);
+  }
+  
+  .login-pc {
+    font-family: var(--font-primary);
+    font-size: .9rem;
+    /* font-weight: 300; */
+    color: var(--color-cards);
+  }
+  
+}
+
+
+@media
+(width > 1400px) {
+  .nav-pc {
+    padding: 1rem 0;
   }
 }

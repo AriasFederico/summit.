@@ -17,7 +17,7 @@ export const BannersHome = ({paragraph}) => {
   return (
     <div className="bannershome">
       <div className="banner-calculator">
-        <img src={bannerCalculator} className='banner-bannershome' data-aos='zoom-in-left'/>
+        <img src={bannerCalculator} className='banner-bannershome' data-aos='zoom-in' data-aos-duration={900}/>
         <div className="title-span-paragraph-container">
           <h2 className='title-paragraph-banners'>Calculadoras Summit para la gestión de precios</h2>
           <div className="banners-paragraph-container">
@@ -42,7 +42,7 @@ export const BannersHome = ({paragraph}) => {
       </div>
 
       <div className="banner-list">
-        <img src={bannerCalculator} className='banner-bannershome'  data-aos='zoom-in-right'/>
+        <img src={bannerCalculator} className='banner-bannershome'  data-aos='zoom-in' data-aos-duration={900}/>
         <div className="title-span-paragraph-container">
           <h2 className='title-paragraph-banners'>Gestiona tu lista de precios</h2>
           <div className="banners-paragraph-container">

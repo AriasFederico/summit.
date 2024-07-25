@@ -2,13 +2,14 @@
 .paragraph-banners {
   font-family: var(--font-primary);
   line-height: 1.7;
-  font-weight: 200;
+  /* font-weight: 200; */
 }
 
 .span-banners {
-  color: var(--color-blue);
+  /* color: var(--color-blue); */
 }
 
 .paragraph-banners {
-  color: var(--color-white);
+  /* color: var(--color-white); */
+  color: var(--color-gray);
 }

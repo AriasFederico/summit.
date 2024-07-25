@@ -1,14 +1,15 @@
 .cards {
+  background-color: var(--color-white);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.3rem;
-  background-color: var(--color-cards);
   width: 100%;
   text-align: center;
   padding: 3rem 0;
   border-radius: var(--border-radius-base);
-  box-shadow: 0px 3px 6px 2px #37373733;
+  box-shadow: 5px 9px 15px 7px #72727259;
+  /* box-shadow: ; */
 }
 
 .card-icon {
@@ -28,15 +29,16 @@
 }
 
 .span-cards {
-  font-weight: 400;
-  color: var(--color-white);
+  /* font-weight: 400; */
+  /* color: var(--color-white); */
+  color: var(--color-blue);
   font-family: var(--font-primary);
 }
 
 .paragraph-cards {
   font-family: var(--font-primary);
   color: var(--color-gray);
-  font-weight: 200;
+  /* font-weight: 200; */
   font-size: .9rem;
 }
 
@@ -60,7 +62,7 @@
 
   .cards {
     justify-content: center;
-    height: 350px;
+    /* height: 350px; */
   }
   
   .paragraph-cards {

@@ -8,12 +8,12 @@
   --font-monts:"Montserrat", sans-serif;
 
 /* COLORS */
-  --color-background:#22262f;
-  --color-cards:#282f39;
-  --color-orange:#ec6755;
-  --color-blue:#337AB2;
-  --color-orange-hover:#eb7869;
-  --color-gray:#cecbcac5;
+  /* --color-background:#22262f; */
+  /* --color-cards:#282f39; */
+  --color-orange:#694F8E;
+  --color-blue:#007cfb;
+  --color-blue-hover:#18518a;
+  --color-gray:#52525b;
   --color-white:#f7f7f7;
   --color-green:#78ee61;
 
@@ -33,6 +33,7 @@
 body {
   min-width: 360px;
   background-color: var(--color-background);
+  font-size: 18px;
 }
 
 h1,
@@ -40,7 +41,7 @@ h2,
 h3,
 h4 {
   font-family: var(--font-primary);
-  color: var(--color-white);
+  /* color: var(--color-white); */
   /* font-weight: 600; */
 }
 
@@ -55,16 +56,21 @@ a {
 }
 
 @media
+(width >= 375px) and
+(width <= 885px) {
+  body {
+    font-size:16px
+  }
+}
+
+@media
 (width >= 885px) {
 
-  .header {
-    max-width: 1280px;
-    margin: 0 auto 2rem;
-  }
+  
   .homepage,
   .login,
   .register {
-    max-width: 1280px;
+    max-width: 1400px;
     margin: 0 auto;
   }
 }
@@ -80,7 +86,7 @@ a {
  /* BUTTON */
 
 .link-default {
-  font-weight: 200;
+  /* font-weight: 200; */
   font-family: var(--font-primary);
   transition: var(--transition-time);
 }

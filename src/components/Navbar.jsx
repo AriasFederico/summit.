@@ -32,8 +32,8 @@ export const Navbar = () => {
           <div className="user"></div>
           
           <div className="links-pc-container">
-            <Link to={'register'} className='link-pc'>Registrarse</Link>
-            <Link to={'login'} className='link-pc'>Iniciar sesión</Link>
+            <Link to={'login'} className='link-default login-pc'>Iniciar sesión</Link>
+            <Link to={'register'} className='link-default link-pc register-pc'>Registrarse</Link>
           </div>
         </nav>
 

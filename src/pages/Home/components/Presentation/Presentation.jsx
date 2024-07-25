@@ -18,7 +18,7 @@ export const Presentation = () => {
 
   return (
     <div className='presentation'>
-      <div className='presentation-h1-btn-container' >
+      <div className='presentation-h1-btn-container' data-aos='fade-right' data-aos-duration={900}>
         <h1 className='h1-presentation'>Gestiona tus precios, <span className='span-presentation'>maximiza</span> tus resultados.</h1>
 
         <div className="paragraph-presentation">Summit es una aplicación web gratuita e innovadora diseñada para facilitar la gestión y el cálculo de precios de manera rápida y eficiente.</div>
@@ -33,7 +33,7 @@ export const Presentation = () => {
         <Link to={'register'} className='link-default link-presentation'>Comenzar</Link>
       </div>
 
-      <img src={banner_presentation} className='banner-presentation-mobile' data-aos={'fade-left'} />
+      <img src={banner_presentation} className='banner-presentation-mobile' data-aos="zoom-in" data-aos-duration={900} />
     </div>
   )
 }
