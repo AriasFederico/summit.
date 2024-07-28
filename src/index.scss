@@ -1,0 +1,32 @@
+@import './../src/styles/variables';
+@import './styles/mixins-mediaqueries';
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+* {
+  font-family: $font;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+}
+
+a,
+a:active, 
+a:visited {
+  text-decoration: none;
+}
+
+.Wrapper {
+  width: 96%;
+  max-width: 87.5rem;
+  margin: auto;
+}

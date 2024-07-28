@@ -1,0 +1,17 @@
+$breakpoint-medium: 780px;
+$breakpoint-large: 1280px;
+
+@mixin respond-to($breakpoint) {
+ @if $breakpoint == 'medium' {
+    @media 
+    (width >= $breakpoint-medium) {
+      @content;
+    }
+  } @else if $breakpoint == 'large' {
+    @media 
+    (width >= $breakpoint-large) {
+      @content;
+    }
+  }
+};
+

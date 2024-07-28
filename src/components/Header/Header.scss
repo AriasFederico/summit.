@@ -1,0 +1,65 @@
+@import '../../styles/variables';
+@import '../../styles/mixins-mediaqueries';
+
+.Header {
+  width: 100%;
+
+  .Wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  &-h1 {
+    font-weight: 800;
+    font-size: 2rem;
+  }
+  
+  &-logo{
+    color: $primary-color;
+  }
+
+  &-nav{
+    display: none;
+
+    @include respond-to('medium'){
+      display: block;
+    };
+  }
+
+  &-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &-btn{ 
+
+    width: 2.6rem;
+    border: none;
+
+    @include respond-to('medium') {
+      display: none;
+    }
+  }
+
+  &-svg{
+    width: 100%;
+  }
+
+  &-link-pc{
+    color: $black-color;
+
+
+  }
+
+  &-register {
+    background-color: $black-color;
+    padding: .5rem 1.5rem;
+    color: white; 
+  }
+}

@@ -1,0 +1,10 @@
+@mixin btn-blue($background, $color, $hover) {
+  background-color: $background;
+  color: $color;
+  padding: .5rem 1rem;
+};
+
+
+@mixin transitions($time) {
+  transition: $time all ease;
+}

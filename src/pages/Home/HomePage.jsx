@@ -1,14 +1,9 @@
-import { Presentation } from "./components/Presentation/Presentation"
-import { Functionalities } from "./components/Functionalities/Functionalities"
-import { BannersHome } from "./components/BannersHome/BannersHome"
-import './HomePage.css'
+import { Hero } from "./components/Hero/Hero.jsx"
 
 export const HomePage = () => {
   return (
-    <div className="homepage">
-      <Presentation/>
-      <Functionalities/>
-      {/* <BannersHome/> */}
-    </div>
+    <>
+      <Hero/>
+    </>
   )
 }
