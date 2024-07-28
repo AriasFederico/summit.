@@ -18,6 +18,9 @@
     padding: 0;
   }
 
+  &-span {
+    color: $primary-color;
+  }
 
   &-h2 {
     font-size: map-get($font-sizes, 'small');
@@ -39,6 +42,10 @@
   &-p {
     line-height: 1.7;
 
+    @include respond-to('medium') {
+      font-size: 1.3rem;
+      max-width: 80%;
+    }
   }
 
   &-sv {
@@ -57,7 +64,7 @@
     display: flex;
     align-items: center;
     gap: .7rem;
-    font-size: .9rem;
+    // font-size: .9rem;
   }
 
   &-p-tick {
@@ -65,15 +72,23 @@
   }
 
   &-btn {
-    background-color: $primary-color;
+    background-color: $secondary-color;
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
     color: white;
     @include transitions(.3s);
+
     &:hover {
       background-color: $black-color;
     }
+
+    @include respond-to('large') {
+      align-self: flex-start;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
   }
 
 }
