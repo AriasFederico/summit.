@@ -38,9 +38,8 @@
   }
 
   &-btn{ 
-
-    width: 2.6rem;
     border: none;
+    background-color: transparent;
 
     @include respond-to('medium') {
       display: none;
@@ -48,7 +47,9 @@
   }
 
   &-svg{
-    width: 100%;
+    
+    width: 2.3rem;
+    height: 2rem;
   }
 
   &-link-pc{

@@ -10,7 +10,6 @@ export const Hero = () => {
     Aos.init()
   },[])
 
-
   return (
     <main className='Hero' data-aos='fade-right' data-aos-duration='1000'>
       <h2 className={'Hero-h2'}>Gestiona tus precios, <span className='Hero-span'>maximiza</span> tus ganancias</h2>
