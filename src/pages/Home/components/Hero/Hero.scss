@@ -3,11 +3,8 @@
 @import '../../../../styles/mixins-btns';
 
 .Hero {
-
   width: 96%;
-  min-height: 70vh;
-  // background-color: red;
-  // padding: 0 1rem;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -26,6 +23,13 @@
     font-size: map-get($font-sizes, 'small');
     font-weight: 800;
     line-height: 1.5;
+    color: $black-color;
+
+    &::after{
+      content: '.';
+      margin-left: .2rem;
+      color: $primary-color;
+    }
 
     @include respond-to('medium') {
       max-width: 80%;
@@ -37,10 +41,12 @@
       max-width: 60%;
       font-size:map-get($font-sizes, 'large' );
     }
+
   }
 
   &-p {
     line-height: 1.7;
+    color: $black-color;
 
     @include respond-to('medium') {
       font-size: 1.3rem;
@@ -85,8 +91,8 @@
 
     @include respond-to('large') {
       align-self: flex-start;
-      padding-left: 4rem;
-      padding-right: 4rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
     }
 
   }
