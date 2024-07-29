@@ -14,8 +14,13 @@
   gap: 3rem;
   text-align: center;
 
-  // @include respond-to('medium')
-  // @include respond-to('medium')
+  @include respond-to('medium') {
+    flex-flow: row nowrap;
+    gap: 2rem;
+    text-align: start;
+  }
+
+  // @include respond-to('large')
 
   .Banner-flex {
     display: flex;
@@ -26,6 +31,12 @@
   .Banner-h3 {
     font-size: map-get($font-sizes, 'small' );
     color: $black-color;
+
+      @include respond-to('medium') {
+        font-size: 2.4rem;
+        font-weight: 800;
+      }
+
   }
 
   .Banner-span {
@@ -40,6 +51,13 @@
 
   .Banner-img {
     width: 85%;
+
+      @include respond-to('medium') {
+        width: 40%;
+      }
+
+        @include respond-to('large') {
+          width: 50%;
+        }
   }
-  
 }

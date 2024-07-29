@@ -16,12 +16,12 @@ export const Banner = () => {
       <div className="Banner-flex">
         <SpanBanner 
         span={'HERRAMIENTAS'}/>
-        
+
         <TitleBanner 
         title={'Gestiona tu lista de precios y calcula márgenes'}/>
 
         <ParagraphBanner 
-        paragraph={'Con nuestra app, podes usar las calculadoras de porcentajes para determinar tus márgenes de ganancias y mantener una lista organizada de tus precios. Ahorra tiempo y mejora la precisión de tus precios!.'}/>
+        paragraph={'Con nuestra app, podes usar las calculadoras de porcentajes para determinar tus márgenes de ganancias y mantener una lista organizada de tus precios. Ahorra tiempo y mejora la precisión!.'}/>
 
       </div>
       <Img img={herramientas} alt={'herramientas'}/>
