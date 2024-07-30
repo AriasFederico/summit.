@@ -3,7 +3,7 @@
 
 .Header {
   width: 100%;
-
+  position: relative;
   .Wrapper {
     display: flex;
     flex-flow: row nowrap;
@@ -61,5 +61,17 @@
     background-color: $black-color;
     padding: .5rem 1.5rem;
     color: white; 
+  }
+
+  // nav mobile
+
+  &-navmobile {
+    position: absolute;
+    width: 100vw;
+    height: 400px;
+    top: 4.5rem;
+    left: 0;
+    padding: 1rem;
+    background-color: $black-color;
   }
 }
