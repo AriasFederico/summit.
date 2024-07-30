@@ -28,7 +28,7 @@
     &::after{
       content: '.';
       margin-left: .2rem;
-      color: $primary-color;
+      color: $primary-color ;
     }
 
     @include respond-to('medium') {

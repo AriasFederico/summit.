@@ -21,7 +21,7 @@ export const Banner = () => {
         title={'Gestiona tu lista de precios y calcula márgenes'}/>
 
         <ParagraphBanner 
-        paragraph={'Con nuestra app, podes usar las calculadoras de porcentajes para determinar tus márgenes de ganancias y mantener una lista organizada de tus precios. Ahorra tiempo y mejora la precisión!.'}/>
+        paragraph={'Con nuestra app, podes usar las calculadoras de porcentajes para determinar tus márgenes de ganancias y mantener una lista organizada de tus precios. Ahorra tiempo y mejora la precisión !'}/>
 
       </div>
       <Img img={herramientas} alt={'herramientas'}/>
