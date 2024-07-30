@@ -2,6 +2,7 @@ import { Hero } from "./components/Hero/Hero.jsx"
 import { Banner } from "./components/Banners.jsx/Banner.jsx"
 import { Functionalities } from "./components/Functionalities/Functionalities.jsx"
 import { LastParagraph } from "./components/LastParagraph/LastParagraph.jsx"
+import { Footer } from "../../components/Footer/Footer.jsx"
 
 export const HomePage = () => {
   return (
@@ -10,6 +11,8 @@ export const HomePage = () => {
       <Banner/>
       <Functionalities/>
       <LastParagraph/>
+
+      <Footer/>
     </>
   )
 }
