@@ -12,7 +12,7 @@ export const Banner = () => {
   },[])
 
   return (
-    <section className='Banner' data-aos={'zoom-in'} data-aos-duration={200}>
+    <section className='Banner' data-aos={'zoom'} data-aos-duration={1000}>
       <div className="Banner-flex">
         <SpanBanner 
         span={'Herramientas'}/>

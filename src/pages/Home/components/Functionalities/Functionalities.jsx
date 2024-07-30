@@ -10,7 +10,7 @@ export const Functionalities = () => {
   },[])
 
   return (
-    <section className='Functionalities' data-aos='zoom-in'>
+    <section className='Functionalities' data-aos={'zoom'} data-aos-duration={1000}>
       <h4 className='Functionalities-h4'>¿ Por qué elegir Summit ?</h4>
       <div className="Functionalities-card-container">
         <Card 
