@@ -15,7 +15,7 @@ export const Banner = () => {
     <section className='Banner' data-aos={'zoom-in'} data-aos-duration={200}>
       <div className="Banner-flex">
         <SpanBanner 
-        span={'HERRAMIENTAS'}/>
+        span={'Herramientas'}/>
 
         <TitleBanner 
         title={'Gestiona tu lista de precios y calcula márgenes'}/>

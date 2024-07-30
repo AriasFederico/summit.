@@ -1,5 +1,5 @@
 @import './../../../../styles/variables';
-
+@import '../../../../styles//mixins-mediaqueries';
 
 .Functionalities {
   width: 96%;
@@ -17,6 +17,8 @@
     font-weight: 800;
     color: $black-color;
     align-self: center;
+    text-align: center;
+
   }
 
   &-svg {
@@ -26,11 +28,18 @@
   }
 
   &-card-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
+
+    @include respond-to('medium'){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      align-items: center;
+      gap: 1rem;  
+    }
   }
 
   &-card {

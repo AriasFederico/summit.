@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import './Functionalities.scss'
 import Aos from 'aos'
 
+
 export const Functionalities = () => {
 
   useEffect(()=>{
