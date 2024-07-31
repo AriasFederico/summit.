@@ -1,9 +1,11 @@
 import './Register.scss'
-import banner from '../../assets/banners/register.svg'
-import Aos from 'aos'
 import { useEffect } from 'react'
+import Aos from 'aos'
+import banner from '../../assets/banners/register.svg'
 import { useView } from './hooks/useView'
 import { useRegister } from './hooks/useRegister'
+import { useAlert } from './hooks/useAlert'
+import { Link } from 'react-router-dom'
 
 export const Register = () => {
 
@@ -25,6 +27,11 @@ export const Register = () => {
     handleSubmit
   } = useRegister()
 
+  const {
+    alert,
+    showAlert
+  } = useAlert()
+
   return (
     <div className="Register" data-aos={'zoom'}>
       <img src={banner} alt="" className='Register-banner' />    
@@ -40,10 +47,9 @@ export const Register = () => {
               <input type='text' placeholder='Nombre' name='name' value={name} onChange={handleChange} className='Register-input'/>
             </label>
           </div>
-
           <div className="Register-block">
             <label htmlFor="email" className='Register-label'>
-              Email
+              Email 
               <input type='email' placeholder='Ejemplo@gmail.com' name='email' value={email} onChange={handleChange} className='Register-input'/>
             </label>
           </div>
@@ -67,14 +73,36 @@ export const Register = () => {
               </div>
             </label>
           </div>
+
+          <div className="Register-alert-cont">
+            <button className='Register-btn-show' onClick={showAlert}>?</button>
+            {
+              alert && 
+              <AlertRegister/>
+            }
+          </div>
         </div>
 
         <button type={'submit'} className='Register-btn'>Registrarse</button>
+        <Link to='/login' className='Register-login-btn'>Ya tengo una cuenta</Link>
+
       </form>
     </div>
   )
 }
 
 
+export const AlertRegister = () => {
+
+  useEffect(() => {
+    Aos.init()
+  },[])
+
+  return (
+    <div className="Register-alert" data-aos={'zoom-in'}>
+        <p className='Register-alert-p'>Por favor, utiliza un correo electrónico real y válido. Este será necesario para recibir comunicaciones importantes, incluyendo la posibilidad de restablecer tu contraseña en caso de que la olvides.</p>
+    </div>
+  )
+}
 
 // minimo 8 caracteres en el palceholder
