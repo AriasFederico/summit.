@@ -11,7 +11,6 @@ export const HomePage = () => {
       <Banner/>
       <Functionalities/>
       <LastParagraph/>
-
       <Footer/>
     </>
   )

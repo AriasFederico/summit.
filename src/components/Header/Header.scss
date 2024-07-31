@@ -4,6 +4,7 @@
 .Header {
   width: 100%;
   position: relative;
+  
   .Wrapper {
     display: flex;
     flex-flow: row nowrap;
@@ -73,5 +74,9 @@
     left: 0;
     padding: 1rem;
     background-color: $black-color;
+
+    @include respond-to('medium') {
+      display: none;
+    }
   }
 }
