@@ -34,10 +34,7 @@ export const Register = () => {
 
   return (
     <div className="Register" data-aos={'zoom'}>
-      <img src={banner} alt="" className='Register-banner' />    
-
-      <form className="Register-form" onSubmit={handleSubmit}>
-        
+      <form className="Register-form" onSubmit={handleSubmit}>        
         <h2 className='Register-h2'>Registrarse</h2>
 
         <div className="Register-flex">

@@ -11,6 +11,10 @@ body {
   min-width: 375px;
 }
 
+button {
+  cursor: pointer;
+}
+
 * {
   font-family: $font;
   box-sizing: border-box;
