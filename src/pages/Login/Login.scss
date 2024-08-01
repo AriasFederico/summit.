@@ -12,7 +12,7 @@
   gap: 4rem;
 
   @include respond-to('medium'){
-    margin: 4rem auto 0;
+    // margin: 4rem auto 0;
   }
 
   @include respond-to('large'){
