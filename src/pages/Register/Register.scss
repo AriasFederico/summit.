@@ -12,14 +12,34 @@
   gap: 4rem;
 
   @include respond-to('medium'){
-    margin: 2rem auto 0;
+    margin: 4rem auto 0;
+  }
+
+  @include respond-to('large'){
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
   }
 
   &-form {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+
+    @include respond-to('medium'){
+      width: 70%;
+    }  
+
+    @include respond-to('large'){
+      width: 35%;
+    }  
+    
+  }
+
+  &-h2 {
+    align-self: center;
   }
 
   &-label {
@@ -33,15 +53,28 @@
     padding: 1rem .5rem;
     outline: none;
     width: 100%;
+    font-weight: 600;
 
     &:focus {
       border-color: $black-color;
     }
+
+    @include respond-to('large'){
+    }
+  
   }
 
   &-img {
     width: 100%;
     padding: 2rem;
+
+    @include respond-to('medium'){
+      width: 50%;
+    }
+
+    @include respond-to('large'){
+      width: 40%;
+    }  
   }
 
   &-submit {
@@ -74,6 +107,17 @@
     font-size: .9rem;
     padding: 1rem;
     z-index: 500;
+  }
+
+  &-login {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-loginbtn {
+    font-size: .9rem;
+    text-decoration: underline;
+    color: $secondary-color;
   }
 
 }

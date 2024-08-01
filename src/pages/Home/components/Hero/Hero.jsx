@@ -11,7 +11,7 @@ export const Hero = () => {
   },[])
 
   return (
-    <main className='Hero' data-aos='fade-right' data-aos-duration='1000'>
+    <main className='Hero' data-aos='zoom'>
       <h2 className={'Hero-h2'}>Gestiona tus precios, <span className='Hero-span'>maximiza</span> tus ganancias</h2>
       <p className='Hero-p'>Summit es una aplicación web gratuita e innovadora diseñada para facilitar la gestión y el cálculo de precios de manera rápida y eficiente</p>
       <div className='Hero-ticks'>

@@ -37,7 +37,8 @@ export const Register = () => {
       <img src={banner} alt={'registrarse'} className='Register-img' />
 
       <form className="Register-form" onSubmit={handleSubmit}>
-        <label htmlFor="name" className='Register-label'>
+        <h2 className='Register-h2'>Registra tu negocio !</h2>
+        <label htmlFor="name" className='Regis2er-label'>
           <input type="text" name='name' placeholder='Nombre de tu negocio' onChange={handleChange} value={name}  className='Register-input'/>
         </label>
 
@@ -54,7 +55,7 @@ export const Register = () => {
         <button type='submit' className='Register-submit'>Registrarse</button>
 
         <div className="Register-login">
-          <Link type='submit' className='Register-loginbtn'>Ya tengo cuenta</Link>          
+          <Link type='submit' to='/login' className='Register-loginbtn'>Ya tengo cuenta</Link>          
         </div>
       </form>
     </div>
