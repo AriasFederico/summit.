@@ -24,24 +24,26 @@ export const Login = () => {
 
   return (
     <div className="Login">
-      <div className="Register" data-aos={'zoom'}>
-        <img src={banner} alt={'registrarse'} className='Register-img' />
+      <div className="Login" data-aos={'zoom'}>
+        <img src={banner} alt={'registrarse'} className='Login-img' />
 
-        <form className="Register-form" onSubmit={handleSubmit}>
-          <h2 className='Register-h2'>Iniciar sesión</h2>
-          <label htmlFor="email" className='Register-label'>
-            <input type="email" name='email' placeholder='Ingresa tu email' onChange={handleChange} value={email}  className='Register-input'/>
+        <form className="Login-form" onSubmit={handleSubmit}>
+          <h2 className='Login-h2'>Iniciar sesión</h2>
+          <label htmlFor="email" className='Login-label'>
+            <input type="email" name='email' placeholder='Ingresa tu email' onChange={handleChange} value={email}  className='Login-input'/>
           </label>
 
-          <label htmlFor="password" className='Register-label'>
-            <input type={view ? 'text' : 'password'} name='password' placeholder='********' onChange={handleChange} className='Register-input' value={password}/>
+          <label htmlFor="password" className='Login-label'>
+            <input type={view ? 'text' : 'password'} name='password' placeholder='********' onChange={handleChange} className='Login-input' value={password}/>
             <EyePassword view={view} showPassword={showPassword} hiddePassword={hiddePassword}/>
           </label>
 
-          <button type='submit' className='Register-submit'>Iniciar sesión</button>
+          <p>Usar este parrafo como error</p>
 
-          <div className="Register-login">
-            <Link type='submit' to='/login' className='Register-loginbtn'>¿Olvidaste tu contraseña?</Link>          
+          <button type='submit' className='Login-submit'>Iniciar sesión</button>
+
+          <div className="Login-login">
+            <Link type='submit' to='/login' className='Login-loginbtn'>¿Olvidaste tu contraseña?</Link>          
           </div>
         </form>
       </div>

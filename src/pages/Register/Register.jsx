@@ -1,11 +1,11 @@
 import './Register.scss'
 import { useContext, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Aos from 'aos'
 import banner from '../../assets/banners/register.svg'
 import { useView } from './hooks/useView'
 import { useRegister } from './hooks/useRegister'
 import { useAlert } from './hooks/useAlert'
-import { Link } from 'react-router-dom'
 
 export const Register = () => {
 
@@ -24,7 +24,9 @@ export const Register = () => {
     email,
     password,
     handleChange,
-    handleSubmit
+    handleSubmit,
+    condition,
+    exit
   } = useRegister()
 
   const {
@@ -52,7 +54,10 @@ export const Register = () => {
           <EyePassword view={view} showPassword={showPassword} hiddePassword={hiddePassword}/>
         </label>
 
-        <button type='submit' className='Register-submit'>Registrarse</button>
+        <p className={condition ? 'Register-condition-active' : 'Register-condition'}>Mínimo 8 caracteres</p>
+
+        {/* <button type='submit' className='Register-submit'>Registrarse</button> */}
+        <BtnSubmit exit={exit}/>
 
         <div className="Register-login">
           <Link type='submit' to='/login' className='Register-loginbtn'>Ya tengo cuenta</Link>          
@@ -102,5 +107,15 @@ export const EyePassword = ({ view, showPassword, hiddePassword }) => {
   )
 }
 
+export const BtnSubmit = ({exit}) => {
+  return (
+    <button type={exit ? 'none' : 'submit'} className={exit ? 'Register-submit-exit' : 'Register-submit'}>
+    {
+      exit 
+      ? 'Registro exitoso'
+      : 'Registrarse'
+    }
+  </button>
 
-// 
+  )
+}

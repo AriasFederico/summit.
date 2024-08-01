@@ -2,11 +2,22 @@ import { useState } from "react";
 
 export const useRegister = () => {
 
+  const [condition, setCondition] = useState(false)
+  const [exit, setExit] = useState(false)
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: ''
   });
+
+  const resetForm = () => {
+    setFormData({
+      name:'',
+      email:'',
+      password:''
+    })
+  }
 
   const {
     name,
@@ -23,15 +34,36 @@ export const useRegister = () => {
   };
 
   const handleSubmit = (e) => {
-    // logica para cuando no se cumplen los 8 caracteres de la contraseña
     e.preventDefault()
-    console.log(
-      name, email, password
-    )
+    
+    // logica para cuando no se cumplen los 8 caracteres de la contraseña
+
+    if (name.length == 0) return
+
+    if (password.length <= 7 ) {
+      setCondition(true);
+      setTimeout(() => {
+        setCondition(false)
+      }, 2000)   
+      return
+    }
+
+    
+    setExit(true)
+    resetForm()
+    
+    setTimeout(() => {
+      setExit(false);
+    }, 2000)
+
+    setCondition(false)
+
   }
 
 
   return {
+    condition,
+    exit,
     name,
     email,
     password,

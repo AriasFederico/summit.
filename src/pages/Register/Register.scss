@@ -35,7 +35,6 @@
     @include respond-to('large'){
       width: 35%;
     }  
-    
   }
 
   &-h2 {
@@ -77,6 +76,16 @@
     }  
   }
 
+  &-condition {
+    font-size: .9rem;
+  }
+
+  &-condition-active {
+    color: red;
+    font-size: .9rem;
+    font-weight: bold;
+  }
+
   &-submit {
     width: 100%;
     margin-top: 2rem;
@@ -85,10 +94,23 @@
     color: white;
     padding: 1rem 0;
     @include transitions(.3s);
+    font-size: 1rem;
 
     &:hover {
       background-color: $black-color;
     }
+  }
+
+  &-submit-exit {
+    width: 100%;
+    margin-top: 2rem;
+    border: none;
+    background-color: $green-color;
+    color: white;
+    padding: 1rem 0;
+    @include transitions(.3s);
+    font-size: 1rem;
+    user-select: none;
   }
 
   &-svg {
