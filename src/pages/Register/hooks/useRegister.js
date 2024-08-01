@@ -23,11 +23,13 @@ export const useRegister = () => {
   };
 
   const handleSubmit = (e) => {
+    // logica para cuando no se cumplen los 8 caracteres de la contraseña
     e.preventDefault()
     console.log(
       name, email, password
     )
   }
+
 
   return {
     name,
