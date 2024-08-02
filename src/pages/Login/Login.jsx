@@ -18,13 +18,14 @@ export const Login = () => {
     email,
     password,
     handleChange,
-    handleSubmit
+    handleSubmit,
+    bad
   } = useLogin()
 
 
   return (
     <div className="Login">
-      <div className="Login" data-aos={'zoom'}>
+      <div className="Login">
         <img src={banner} alt={'registrarse'} className='Login-img' />
 
         <form className="Login-form" onSubmit={handleSubmit}>
@@ -38,7 +39,7 @@ export const Login = () => {
             <EyePassword view={view} showPassword={showPassword} hiddePassword={hiddePassword}/>
           </label>
 
-          <p>Usar este parrafo como error</p>
+          <p className={bad ? 'Login-bad-active' : 'Login-bad'}>Usar este parrafo como error</p>
 
           <button type='submit' className='Login-submit'>Iniciar sesión</button>
 

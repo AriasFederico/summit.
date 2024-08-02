@@ -100,16 +100,6 @@
     cursor: pointer;
   }
 
-  &-message {
-    position: absolute;
-    left: 0;
-    background-color: $black-color;
-    color: white;
-    font-size: .9rem;
-    padding: 1rem;
-    z-index: 500;
-  }
-
   &-login {
     display: flex;
     justify-content: center;
@@ -119,6 +109,16 @@
     font-size: .9rem;
     text-decoration: underline;
     color: $secondary-color;
+  }
+
+  &-bad {
+    font-size: .9rem;
+    color: transparent;
+  }
+
+  &-bad-active {
+    font-size: .9rem;
+    color: red;
   }
 
 }

@@ -27,13 +27,24 @@ export const useLogin = () => {
     console.log(
       email, password
     )
+    
+    setBad(true)
+
+    setTimeout(() => {
+      setBad(false)
+    }, 2000)
+
+
   }
+
+  const [bad, setBad] = useState(false);
 
 
   return {
     email,
     password,
     handleChange,
-    handleSubmit
+    handleSubmit,
+    bad
   }
 }
