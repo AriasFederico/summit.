@@ -24,7 +24,7 @@ export const Login = () => {
 
 
   return (
-    <div className="Login">
+    <div className="Login" >
       <div className="Login">
         <img src={banner} alt={'registrarse'} className='Login-img' />
 
@@ -39,7 +39,7 @@ export const Login = () => {
             <EyePassword view={view} showPassword={showPassword} hiddePassword={hiddePassword}/>
           </label>
 
-          <p className={bad ? 'Login-bad-active' : 'Login-bad'}>Usar este parrafo como error</p>
+          <p className={bad ? 'Login-bad-active' : 'Login-bad'}>Email o contraseña incorrectas</p>
 
           <button type='submit' className='Login-submit'>Iniciar sesión</button>
 

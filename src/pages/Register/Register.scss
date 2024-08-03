@@ -18,7 +18,7 @@
   @include respond-to('large'){
     flex-direction: row;
     justify-content: center;
-    gap: 2rem;
+    gap: 6rem;
   }
 
   &-form {
@@ -52,6 +52,7 @@
     padding: 1rem .5rem;
     outline: none;
     width: 100%;
+    font-size: 1rem;
     font-weight: 600;
 
     &:focus {
@@ -68,6 +69,7 @@
     padding: 2rem;
 
     @include respond-to('medium'){
+      padding: 0;
       width: 50%;
     }
 

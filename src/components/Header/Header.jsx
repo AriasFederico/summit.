@@ -1,10 +1,11 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect} from 'react'
 import './Header.scss'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { globalContext } from '../../context/globalContext'
 import Aos from 'aos'
 
+import { onAuthStateChanged } from 'firebase/auth'
 
 export const Header = () => {
 

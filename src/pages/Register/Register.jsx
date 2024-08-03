@@ -36,7 +36,7 @@ export const Register = () => {
   } = useAlert()
 
   return (
-    <div className="Register" data-aos={'zoom'}>
+    <div className="Register">
       <img src={banner} alt={'registrarse'} className='Register-img' />
 
       <form className="Register-form" onSubmit={handleSubmit}>
