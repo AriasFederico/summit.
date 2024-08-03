@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import app from '../../../services/firebase/credenciales'
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
@@ -8,7 +8,7 @@ const auth = getAuth(app);
 
 
 export const useLogin = () => {
-    const [bad, setBad] = useState(false);
+  const [bad, setBad] = useState(false);
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -35,25 +35,11 @@ export const useLogin = () => {
 
     try {
       await signInWithEmailAndPassword(auth, email, password); 
-
-      onAuthStateChanged(auth, (userFirebase) => {
-        if(userFirebase){
-          navigate('/dashboard', { 
-            replace: true, 
-            state: { 
-              email:userFirebase.email,
-              logged: true
-             } 
-          });
-        } 
-      } )
-      
-
+      navigate('/dashboard')
     } catch (error) {
       console.log('Error al inciar sesión:', error);
       setBad(true)
     }
-    
 
     setTimeout(() => {
       setBad(false)

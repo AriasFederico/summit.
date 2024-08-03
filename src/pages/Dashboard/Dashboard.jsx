@@ -1,14 +1,19 @@
-import { useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { globalContext } from "../../context/globalContext";
+import { Link,Outlet } from "react-router-dom";
 
 export const Dashboard = () => {
-  const location = useLocation();
-  const state = location.state || {}; // Obtén el estado completo
-  const { email } = state; // Accede a la propiedad 'email' si existe
-
+  const {user} = useContext(globalContext)
   return (
     <div>
       <h1>Welcome to the Dashboard</h1>
-      {email && <p>Logged in as: {email}</p>}
+      <p>{user}</p>
+      <Link to={'calculators'}>Calculadora</Link>
+      <Link to={'list'}>Listas</Link>
+
+
+
+      <Outlet/>
     </div>
   );
 };

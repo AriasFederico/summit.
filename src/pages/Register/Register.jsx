@@ -1,13 +1,23 @@
 import './Register.scss'
 import { useContext, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Aos from 'aos'
 import banner from '../../assets/banners/register.svg'
 import { useView } from './hooks/useView'
 import { useRegister } from './hooks/useRegister'
 import { useAlert } from './hooks/useAlert'
+import { globalContext } from '../../context/globalContext'
 
 export const Register = () => {
+  const {user} = useContext(globalContext)
+
+  const redirect = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      redirect('/');
+    }
+  }, [user, redirect]);
 
   useEffect(()=>{
     Aos.init()
@@ -34,6 +44,10 @@ export const Register = () => {
     alert,
     showAlert
   } = useAlert()
+
+  if (user) {
+    return null; // O puedes mostrar un mensaje o un loader
+  }
 
   return (
     <div className="Register">

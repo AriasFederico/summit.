@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import app from '../../../services/firebase/credenciales'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 const auth = getAuth(app);
@@ -10,11 +11,14 @@ export const useRegister = () => {
   const [exit, setExit] = useState(false)
   const [loading, setLoading] = useState(false)
 
+  const navigate = useNavigate();
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: ''
   });
+  
 
   const resetForm = () => {
     setFormData({
@@ -37,7 +41,7 @@ export const useRegister = () => {
       [name]: value
     });
   };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
   
@@ -63,7 +67,10 @@ export const useRegister = () => {
   
       setTimeout(() => {
         setExit(false);
-      }, 2000);
+        navigate('/dashboard')
+      }, 1000);
+
+      
     } catch (error) {
       console.error('Error al crear el usuario:', error);
       // Maneja el error (por ejemplo, mostrar un mensaje al usuario)

@@ -1,12 +1,23 @@
 import './Login.scss'
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useLogin } from './hooks/useLogin'
 import { EyePassword } from '../Register/Register'
 import { useView } from '../Register/hooks/useView'
+import { globalContext } from '../../context/globalContext'
 
 import banner from '../../assets/banners/login.svg'
+import { useContext, useEffect } from 'react'
 
 export const Login = () => {
+  const {user} = useContext(globalContext);
+  const redirect = useNavigate();
+
+
+  useEffect(() => {
+    if (user) {
+      redirect('/');
+    }
+  }, [user, redirect]);
 
   const {
     view,
@@ -22,6 +33,9 @@ export const Login = () => {
     bad
   } = useLogin()
 
+  if (user) {
+    return null; // O puedes mostrar un mensaje o un loader
+  }
 
   return (
     <div className="Login" >

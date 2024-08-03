@@ -1,15 +1,18 @@
-import { useContext, useEffect} from 'react'
+import { useContext, useEffect, useState} from 'react'
 import './Header.scss'
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { globalContext } from '../../context/globalContext'
 import Aos from 'aos'
+import { useNavigate } from 'react-router-dom'
+import app from '../../services/firebase/credenciales'
+import { getAuth, signOut } from 'firebase/auth'
+const auth = getAuth(app)
 
-import { onAuthStateChanged } from 'firebase/auth'
 
 export const Header = () => {
-
-  const {nav} = useContext(globalContext);
+  
+  const {nav, user} = useContext(globalContext);
 
   return (
     <header className='Header'>
@@ -17,13 +20,16 @@ export const Header = () => {
         <Logo/>
         <Hamburger/>
         {nav && <NavMobile/>}
-        <Nav/>
+        <Nav user={user}/>
+
       </div>
       <Outlet/>
     </header>
   )
 }
+// {user ? <p>{user}</p> : ''}
 
+  // crear una funcion que contenga singout y navigate al home */}
 
 export const Logo = () => {
   return (
@@ -35,17 +41,43 @@ export const Logo = () => {
   )
 }
 
-export const Nav = () => {
+export const Nav = ({user}) => {
+
+  const navigate = useNavigate()
+
+  const signOutUser = () => {
+    signOut(auth);
+    navigate('/')
+  }
+
   return (
     <nav className='Header-nav'>
-      <ul className='Header-ul'>
-        <li className='Header-li'>
-          <Link className='Header-link-pc' to={'/login'}>Iniciar sesión</Link>
-        </li>
-        <li className='Header-li'>
-          <Link className='Header-link-pc Header-register' to={'/register'}>Registrarse</Link>
-        </li>
-      </ul>
+      {
+        user 
+        ?  <ul className='Header-ul'>
+            <li className='Header-li'>
+              {user}
+            </li>
+            <li className="Header-li">
+              <Link to={'/dashboard'} className='Header-link-pc'>Centro de control</Link>
+            </li>
+            <li className='Header-li'>
+              <button onClick={()=> signOutUser()} className='Header-link-pc Header-register' to={'/register'}>Cerrar sesión</button>
+            </li>
+          </ul>
+        : <ul className='Header-ul'>
+            <li className="Header-li">
+              <Link to={'/'} className='Header-link-pc'>Inicio</Link>
+            </li>
+            <li className='Header-li'>
+              <Link className='Header-link-pc' to={'/login'}>Iniciar sesión</Link>
+            </li>
+            <li className='Header-li'>
+              <Link className='Header-link-pc Header-register' to={'/register'}>Registrarse</Link>
+            </li>
+          </ul>
+
+      }
     </nav>
   )
 }
