@@ -26,7 +26,8 @@ export const Register = () => {
     handleChange,
     handleSubmit,
     condition,
-    exit
+    exit,
+    loading
   } = useRegister()
 
   const {
@@ -57,11 +58,18 @@ export const Register = () => {
         <p className={condition ? 'Register-condition-active' : 'Register-condition'}>Mínimo 8 caracteres</p>
 
         {/* <button type='submit' className='Register-submit'>Registrarse</button> */}
-        <BtnSubmit exit={exit}/>
+        <BtnSubmit exit={exit} loading={loading}/>
 
         <div className="Register-login">
           <Link type='submit' to='/login' className='Register-loginbtn'>Ya tengo cuenta</Link>          
         </div>
+
+        {
+        exit 
+        ? <ExitRegister exit={exit}/>
+        : ''
+        }
+
       </form>
     </div>
     )
@@ -107,15 +115,28 @@ export const EyePassword = ({ view, showPassword, hiddePassword }) => {
   )
 }
 
-export const BtnSubmit = ({exit}) => {
+export const BtnSubmit = ({loading}) => {
   return (
-    <button type={exit ? 'none' : 'submit'} className={exit ? 'Register-submit-exit' : 'Register-submit'}>
-    {
-      exit 
-      ? 'Registro exitoso'
-      : 'Registrarse'
-    }
+    <button type={loading ? 'none' : 'submit'} className={loading ? 'Register-submit-loading' : 'Register-submit'}>
+      {
+        loading 
+        ? <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 1 0 22 12A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8A8 8 0 0 1 12 20Z" opacity=".5"/><path fill="currentColor" d="M20 12h2A10 10 0 0 0 12 2V4A8 8 0 0 1 20 12Z"><animateTransform attributeName="transform" dur="1s" from="0 12 12" repeatCount="indefinite" to="360 12 12" type="rotate"/></path></svg>
+        : 'Registrarse'
+      }
   </button>
 
+  )
+}
+
+export const ExitRegister = ({exit}) => {
+  return (
+    <div className="Register-registered" data-aos='zoom-in'>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className='Register-tick' viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+      <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+    </svg>
+
+    <p className='Register-exit-message'>Registro exitoso !</p>
+    </div>
   )
 }

@@ -1,6 +1,15 @@
 import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
+
+import app from '../../../services/firebase/credenciales'
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+const auth = getAuth(app);
+
 
 export const useLogin = () => {
+  
+  const [bad, setBad] = useState(false);
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -20,24 +29,30 @@ export const useLogin = () => {
       [name]: value
     });
   };
-
-  const handleSubmit = (e) => {
-    // logica para cuando no se cumplen los 8 caracteres de la contraseña
+  
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(
-      email, password
-    )
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password); 
+      
+      navigate('/dashboard', { 
+        replace: true, 
+        state: { logged: true } 
+      });
+
+    } catch (error) {
+      console.log('Error al inciar sesión:', error);
+      setBad(true)
+    }
     
-    setBad(true)
 
     setTimeout(() => {
       setBad(false)
     }, 2000)
 
-
   }
 
-  const [bad, setBad] = useState(false);
 
 
   return {

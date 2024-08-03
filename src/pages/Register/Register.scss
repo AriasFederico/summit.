@@ -101,11 +101,11 @@
     }
   }
 
-  &-submit-exit {
+  &-submit-loading {
     width: 100%;
     margin-top: 2rem;
     border: none;
-    background-color: $green-color;
+    background-color: $secondary-color;
     color: white;
     padding: 1rem 0;
     @include transitions(.3s);
@@ -141,5 +141,31 @@
     text-decoration: underline;
     color: $secondary-color;
   }
+
+  &-registered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:.7rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 7rem;
+    width: 100%;
+    background-color: $green-color  ;
+  }
+
+  &-tick {
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &-exit-message {
+    color: white;
+    font-weight: 600;
+    user-select: none;
+  }
+
 
 }
